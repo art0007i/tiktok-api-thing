@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>I LOVE CORN</title>
+    <script src="./script.js" defer></script>
+    <style>
+      *{
+        box-sizing:border-box;
+      }
+      #clipRoot{
+        display:flex;
+        flex-direction: column;
+        max-width: fit-content;
+      }
+      #warn {
+        color: red;
+      }
+      .invis {
+        visibility: hidden;
+      }
+      .clip {
+        display: flex;
+        flex-direction: column;
+        background: #aaa;
+        padding: 20px;
+        border-radius: 20px;
+        gap: 10px;
+      }
+      .clip-span{
+        overflow: auto;
+        max-width: 300px;
+        max-height: 54px;
+      }
+      .red {
+        color: red;
+      }
+      .voiceHead {
+        font-weight: bold;
+        font-size: 125%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Tiktok!</h1>
+    <form id="form">
+      <select id="voice" name="voice">
+      </select><br>
+      <label for="query">Input text <span id="promt">(<span id="limit">0</span> / 3000)</span></label>
+      <br>
+      <textarea id="query" name="query" placeholder="The fungus among us."></textarea>
+      <br>
+      <input type="submit" value="GO!"><span id="warn" class="invis">Error!</span>
+    </form>
+    <div id="clipRoot">
+      
+    </div>
+    <template id="templateClip">
+      <div class="clip">
+        <span class="clip-span"></span>
+        <audio src="" controls></audio>
+      </div>
+    </template>
+  </body>
+</html>
